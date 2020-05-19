@@ -1,0 +1,38 @@
+digraph {
+	graph [size="12,12"]
+	node [align=left fontsize=12 height=0.2 ranksep=0.1 shape=box style=filled]
+	1886877654152 [label=MeanBackward0 fillcolor=darkolivegreen1]
+	1886877674576 -> 1886877654152
+	1886877674576 [label=SqueezeBackward1]
+	1886877729792 -> 1886877674576
+	1886877729792 [label=SqueezeBackward1]
+	1886877729904 -> 1886877729792
+	1886877729904 [label=ThnnConv2DBackward]
+	1886877832360 -> 1886877729904
+	1886877832360 [label=MaxPool2DWithIndicesBackward]
+	1886877832584 -> 1886877832360
+	1886877832584 [label=ThnnConv2DBackward]
+	1886877832696 -> 1886877832584
+	1886877832696 [label=ThnnConv2DBackward]
+	1886877832920 -> 1886877832696
+	1886877832920 [label="input
+ (1, 3, 9, 9)" fillcolor=lightblue]
+	1886877832976 -> 1886877832696
+	1886877832976 [label="Conv.weight
+ (3, 3, 3, 3)" fillcolor=lightblue]
+	1886877833032 -> 1886877832696
+	1886877833032 [label="Conv.bias
+ (3)" fillcolor=lightblue]
+	1886877832752 -> 1886877832584
+	1886877832752 [label="Mid_Conv.weight
+ (3, 3, 3, 3)" fillcolor=lightblue]
+	1886877832808 -> 1886877832584
+	1886877832808 [label="Mid_Conv.bias
+ (3)" fillcolor=lightblue]
+	1886877832416 -> 1886877729904
+	1886877832416 [label="Final_Conv.weight
+ (1, 3, 1, 1)" fillcolor=lightblue]
+	1886877832472 -> 1886877729904
+	1886877832472 [label="Final_Conv.bias
+ (1)" fillcolor=lightblue]
+}
