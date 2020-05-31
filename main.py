@@ -61,12 +61,12 @@ def B():
     optim.step()
 
     state_dict = model_B.state_dict()
-    print(state_dict['Conv.weight'])
+    # print(state_dict['Conv.weight'])
     stat = {'model_state_dict': state_dict}
     torch.save(stat, 'model_B.pth')
 
     state = torch.load('model_B.pth', map_location='cpu')
-    print(state['model_state_dict']['Conv.weight'])
+    # print(state['model_state_dict']['Conv.weight'])
 
 
 def C(a_path, b_path):
